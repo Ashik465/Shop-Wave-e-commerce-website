@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.active-link{
+     @apply tracking-wide text-cyan-300  hover:bg-transparent
+     font-bold bg-transparent focus:bg-transparent  hover:text-blue-400
+  }
