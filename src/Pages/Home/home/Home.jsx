@@ -1,9 +1,10 @@
+import Header from "../header/Header";
 
 
 const Home = () => {
     return (
         <>
-           This is home 
+           <Header></Header>
         </>
     );
 };
