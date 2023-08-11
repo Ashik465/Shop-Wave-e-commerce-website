@@ -144,6 +144,14 @@ const Navbar = () => {
             <li>
               <NavLink
                 className="focus:bg-transparent hover:bg-transparent hover:text-blue-400"
+                to="/cart"
+              >
+                Cart
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className="focus:bg-transparent hover:bg-transparent hover:text-blue-400"
                 to="/dashboard"
               >
                 Dashboard

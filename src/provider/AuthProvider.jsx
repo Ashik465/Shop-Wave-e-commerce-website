@@ -52,20 +52,20 @@ const googleLogIn = () => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       
       if(currentUser) {
-        axios.post('https://elite-sports-academy-server.vercel.app/jwt', {
+        axios.post('http://localhost:5000/jwt', {
           email: currentUser.email,
           
         })
         .then(data => {
           console.log(data.data.token);
-          localStorage.setItem('access token', data.data.token);
+          localStorage.setItem('shopwave-access-token', data.data.token);
           setUser(currentUser);
           setLoader(false)
         }
         )
       }
       else{
-        localStorage.removeItem('access token');
+        localStorage.removeItem('shopwave-access-token');
           setUser(currentUser);
           setLoader(false)
 

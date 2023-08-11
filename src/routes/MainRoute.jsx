@@ -7,6 +7,7 @@ import Home from "../Pages/Home/home/Home";
 import LogIn from "../Pages/login/LogIn";
 import SignUp from "../Pages/signup/SignUp";
 import SingleProduct from "../Pages/Home/products/SingleProduct";
+import Cart from "../Pages/Cart/Cart";
 
 
  export const router = createBrowserRouter([
@@ -32,6 +33,12 @@ import SingleProduct from "../Pages/Home/products/SingleProduct";
             element: <SingleProduct />,
             loader: ({ params }) =>
               fetch(`http://localhost:5000/product/${params.id}`),
+          },
+          {
+            path: "/cart",
+            element: <Cart />
+       
+           
           },
       ],
     },
