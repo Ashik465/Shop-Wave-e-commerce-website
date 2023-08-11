@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 
 import { Link } from "react-router-dom";
-// import { MdShoppingCart } from "react-icons/md";
+import { MdShoppingCart } from "react-icons/md";
 import Swal from "sweetalert2";
 
 import useAuth from "../../../hooks/useAuth";
@@ -47,7 +47,7 @@ const ProductCard = ({ product }) => {
       <figure>
         <img src={img} alt="" />
       </figure>
-      <div className="card-body space-y-2">
+      <div className="card-body p-4 space-y-2">
         <h2 className="card-title">{name}</h2>
         <div className="flex justify-between">
           <p>Price: ${price}</p>
@@ -56,13 +56,13 @@ const ProductCard = ({ product }) => {
         </div>
         <div className="flex justify-between items-center">
           <Link to={`/product/${_id}`}>
-            <button className="p-3 bg-slate-300 text-black font-bold hover:text-white hover:bg-purple-500 ">View Details</button>
+            <button className="p-3 bg-slate-300 text-black font-bold hover:text-white hover:bg-purple-500 rounded-full">View Details</button>
           </Link>
           <button
             onClick={() => handleAddToCart(product)}
-            className="p-3 bg-slate-300 text-black font-bold hover:text-white hover:bg-purple-500   "
+            className="p-3 bg-slate-300 text-black font-bold hover:text-white hover:bg-purple-500 rounded-full flex items-center justify-center  "
           >
-            {/* <MdShoppingCart></MdShoppingCart> */}
+            <MdShoppingCart></MdShoppingCart>
             Add to Cart
           </button>
         </div>

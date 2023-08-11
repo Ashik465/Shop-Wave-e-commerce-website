@@ -25,7 +25,7 @@ const Products = () => {
 
   return (
     <>
-      <div className="text-center my-10">
+      <div id="products" className="text-center my-10">
         <h1 className="text-black text-3xl md:text-5xl font-bold">Our Products</h1>
       </div>
 

@@ -6,6 +6,7 @@ import MainLayOut from "../layout/MainLayOut";
 import Home from "../Pages/Home/home/Home";
 import LogIn from "../Pages/login/LogIn";
 import SignUp from "../Pages/signup/SignUp";
+import SingleProduct from "../Pages/Home/products/SingleProduct";
 
 
  export const router = createBrowserRouter([
@@ -25,6 +26,12 @@ import SignUp from "../Pages/signup/SignUp";
           {
             path: "/signup",
             element:<SignUp></SignUp>,
+          },
+          {
+            path: "/product/:id",
+            element: <SingleProduct />,
+            loader: ({ params }) =>
+              fetch(`http://localhost:5000/product/${params.id}`),
           },
       ],
     },
