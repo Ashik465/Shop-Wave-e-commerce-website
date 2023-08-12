@@ -12,6 +12,7 @@ import DashboardLayout from "../layout/DashboardLayout";
 import DashHome from "../Pages/Dashboard/home/DashHome";
 import Customers from "../Pages/Dashboard/Customers/Customers";
 import Productlist from "../Pages/Dashboard/Productlist/Productlist";
+import AddProduct from "../Pages/Dashboard/AddProduct/AddProduct";
 
 
  export const router = createBrowserRouter([
@@ -64,8 +65,8 @@ import Productlist from "../Pages/Dashboard/Productlist/Productlist";
             element: <Productlist />,
           },
           {
-            path: "manageclasses",
-            // element: <AdminRoute><ManageClasses></ManageClasses></AdminRoute>,
+            path: "addproduct",
+            element: <AddProduct />,
           },
           {
             path: "feedback/:id",

@@ -1,11 +1,12 @@
 
-import { Link, NavLink, Outlet } from "react-router-dom";
+import {  NavLink, Outlet } from "react-router-dom";
 import { VscAccount } from "react-icons/vsc";
 
 import { AiOutlineHome, AiOutlineUnorderedList } from "react-icons/ai";
 import { Helmet } from "react-helmet-async";
 
 import DashNav from "../Pages/Dashboard/DashNav/DashNav";
+import { MdProductionQuantityLimits } from "react-icons/md";
 
 
 const DashboardLayout = () => {
@@ -47,8 +48,11 @@ const DashboardLayout = () => {
                                 Dashboard
                             </NavLink>
                         </li>
-      <li><Link to='/dashboard/customers'className={({ isActive }) => isActive ? activeClass : inactiveClass} >  <VscAccount />  customer</Link></li>
-      <li><Link to='/dashboard/productlist'className={({ isActive }) => isActive ? activeClass : inactiveClass} >  <AiOutlineUnorderedList />  Product List</Link></li>
+      <li><NavLink to='/dashboard/customers'className={({ isActive }) => isActive ? activeClass : inactiveClass} >  <VscAccount />  customer</NavLink></li>
+
+      <li><NavLink to='/dashboard/productlist' className={({ isActive }) => isActive ? activeClass : inactiveClass} >  <AiOutlineUnorderedList />  Product List</NavLink></li>
+
+      <li><NavLink to='/dashboard/addproduct' className={({ isActive }) => isActive ? activeClass : inactiveClass} >  <MdProductionQuantityLimits /> Add Product </NavLink></li>
 
      
       
