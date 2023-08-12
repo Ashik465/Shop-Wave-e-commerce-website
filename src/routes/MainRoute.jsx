@@ -13,6 +13,7 @@ import DashHome from "../Pages/Dashboard/home/DashHome";
 import Customers from "../Pages/Dashboard/Customers/Customers";
 import Productlist from "../Pages/Dashboard/Productlist/Productlist";
 import AddProduct from "../Pages/Dashboard/AddProduct/AddProduct";
+import Orderlist from "../Pages/Dashboard/Orderlist/Orderlist";
 
 
  export const router = createBrowserRouter([
@@ -69,8 +70,8 @@ import AddProduct from "../Pages/Dashboard/AddProduct/AddProduct";
             element: <AddProduct />,
           },
           {
-            path: "feedback/:id",
-            // element: <AdminRoute><Feedback></Feedback></AdminRoute> ,
+            path: "orderlist",
+            element: <Orderlist />,
           },
          
           {
