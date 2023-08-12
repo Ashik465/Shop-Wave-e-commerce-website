@@ -8,6 +8,7 @@ import LogIn from "../Pages/login/LogIn";
 import SignUp from "../Pages/signup/SignUp";
 import SingleProduct from "../Pages/Home/products/SingleProduct";
 import Cart from "../Pages/Cart/Cart";
+import DashboardLayout from "../layout/DashboardLayout";
 
 
  export const router = createBrowserRouter([
@@ -42,5 +43,56 @@ import Cart from "../Pages/Cart/Cart";
           },
       ],
     },
+    {
+        path: "/dashboard",
+        element: <DashboardLayout></DashboardLayout>,
+        //   errorElement: <ErrorPage />,
+        children: [
+          {
+            path: "addclass",
+            // element: <InstructorRoute><AddClass></AddClass></InstructorRoute>
+          },
+          {
+            path: "myclasses",
+            // element: <InstructorRoute><MyClasses></MyClasses></InstructorRoute>
+          },
+          {
+            path: "updateclass/:id",
+            // element: <InstructorRoute><UpdateClass></UpdateClass></InstructorRoute>,
+          },
+          {
+            path: "manageclasses",
+            // element: <AdminRoute><ManageClasses></ManageClasses></AdminRoute>,
+          },
+          {
+            path: "feedback/:id",
+            // element: <AdminRoute><Feedback></Feedback></AdminRoute> ,
+          },
+         
+          {
+            path: "manageuser",
+            // element: <AdminRoute><ManageUser></ManageUser></AdminRoute> ,
+          },
+          {
+            path: "myselectedclass",
+            // element: <StudentRoute><MySelectedClass></MySelectedClass></StudentRoute> ,
+          },
+          {
+            path: "payment",
+            // element: <StudentRoute><Payment></Payment></StudentRoute> ,
+          },
+          {
+            path: "myenrollclasses",
+            // element: <StudentRoute><MyEnrollClasses></MyEnrollClasses></StudentRoute> ,
+          },
+          {
+            path: "paymenthistory",
+            // element: <StudentRoute><PaymentHistory></PaymentHistory></StudentRoute> ,
+          },
+         
+         
+         
+        ],
+      },
   ]);
 
