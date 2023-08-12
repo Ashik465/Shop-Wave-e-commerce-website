@@ -9,6 +9,7 @@ import SignUp from "../Pages/signup/SignUp";
 import SingleProduct from "../Pages/Home/products/SingleProduct";
 import Cart from "../Pages/Cart/Cart";
 import DashboardLayout from "../layout/DashboardLayout";
+import DashHome from "../Pages/Dashboard/home/DashHome";
 
 
  export const router = createBrowserRouter([
@@ -49,8 +50,8 @@ import DashboardLayout from "../layout/DashboardLayout";
         //   errorElement: <ErrorPage />,
         children: [
           {
-            path: "addclass",
-            // element: <InstructorRoute><AddClass></AddClass></InstructorRoute>
+            path: "home",
+            element: <DashHome></DashHome>,
           },
           {
             path: "myclasses",

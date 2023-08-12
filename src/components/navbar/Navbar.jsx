@@ -72,40 +72,50 @@ const Navbar = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
-              <li>
-                <NavLink
-                  className="focus:bg-transparent hover:bg-transparent hover:text-blue-400"
-                  to="/"
-                >
-                  Home
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  className="focus:bg-transparent hover:bg-transparent hover:text-blue-400"
-                  to="/instructor"
-                >
-                  Instructors
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  className="focus:bg-transparent hover:bg-transparent hover:text-blue-400"
-                  to="/classes"
-                >
-                  Classes
-                </NavLink>
-              </li>
-              {user && (
-                <li>
-                  <NavLink
-                    className="focus:bg-transparent hover:bg-transparent hover:text-blue-400"
-                    to="/dashboard"
-                  >
-                    Dashboard
-                  </NavLink>
-                </li>
-              )}
+               <li>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive
+                    ? "active-link"
+                    : "focus:bg-transparent hover:bg-transparent hover:text-blue-400"
+                }
+                to="/"
+              >
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <a
+                className="focus:bg-transparent hover:bg-transparent hover:text-blue-400"
+                href="#products"
+              >
+                Products
+              </a>
+            </li>
+            <li>
+              <NavLink
+                className={({ isActive }) =>
+                isActive
+                  ? "active-link"
+                  : "focus:bg-transparent hover:bg-transparent hover:text-blue-400"
+              }
+                to="/cart"
+              >
+                Cart
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+               className={({ isActive }) =>
+               isActive
+                 ? "active-link"
+                 : "focus:bg-transparent hover:bg-transparent hover:text-blue-400"
+             }
+                to="/dashboard/home"
+              >
+                Dashboard
+              </NavLink>
+            </li>
             </ul>
           </div>
           <Link to="/">
@@ -143,7 +153,11 @@ const Navbar = () => {
             </li>
             <li>
               <NavLink
-                className="focus:bg-transparent hover:bg-transparent hover:text-blue-400"
+                className={({ isActive }) =>
+                isActive
+                  ? "active-link"
+                  : "focus:bg-transparent hover:bg-transparent hover:text-blue-400"
+              }
                 to="/cart"
               >
                 Cart
@@ -151,8 +165,12 @@ const Navbar = () => {
             </li>
             <li>
               <NavLink
-                className="focus:bg-transparent hover:bg-transparent hover:text-blue-400"
-                to="/dashboard"
+               className={({ isActive }) =>
+               isActive
+                 ? "active-link"
+                 : "focus:bg-transparent hover:bg-transparent hover:text-blue-400"
+             }
+                to="/dashboard/home"
               >
                 Dashboard
               </NavLink>

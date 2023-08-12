@@ -36,6 +36,7 @@ const DashboardLayout = () => {
 
       {/* instructor  */}
 
+       <li><Link to='/dashboard/home' > <SiGoogleclassroom></SiGoogleclassroom>   Add A Class</Link></li>
        <li><Link to='/dashboard/addclass' > <SiGoogleclassroom></SiGoogleclassroom>   Add A Class</Link></li>
       <li><Link to='/dashboard/myclasses' > <SiGooglemeet></SiGooglemeet>  My classes</Link></li>
 
