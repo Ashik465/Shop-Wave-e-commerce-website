@@ -4,7 +4,8 @@ import { SiGoogleclassroom,SiGooglemeet } from "react-icons/si";
 // import { MdManageAccounts, MdPayment, MdSportsScore } from "react-icons/md";
 
 import { Helmet } from "react-helmet-async";
-import Navbar from "../components/navbar/Navbar";
+
+import DashNav from "../Pages/Dashboard/DashNav/DashNav";
 
 
 const DashboardLayout = () => {
@@ -17,13 +18,13 @@ const DashboardLayout = () => {
         <title> ShopWave | Dashboard</title>
       </Helmet>
         {/* navbar  */}
-        <Navbar></Navbar>
+       <DashNav></DashNav>
 
         <div className="drawer lg:drawer-open ">
   <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
   <div className="drawer-content flex flex-col items-center justify-center overflow-x-auto">
     {/* Page content here */}
-    <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open side-Navbar</label>
+    {/* <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open side-Navbar</label> */}
 
     
     <Outlet></Outlet>
