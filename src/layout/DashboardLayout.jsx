@@ -1,8 +1,8 @@
 
-import { Link, Outlet } from "react-router-dom";
-import { SiGoogleclassroom,SiGooglemeet } from "react-icons/si";
+import { Link, NavLink, Outlet } from "react-router-dom";
+import { SiGooglemeet } from "react-icons/si";
 // import { MdManageAccounts, MdPayment, MdSportsScore } from "react-icons/md";
-
+import { AiOutlineHome } from "react-icons/ai";
 import { Helmet } from "react-helmet-async";
 
 import DashNav from "../Pages/Dashboard/DashNav/DashNav";
@@ -11,7 +11,8 @@ import DashNav from "../Pages/Dashboard/DashNav/DashNav";
 const DashboardLayout = () => {
 
 
-
+    const activeClass = "text-white bg-blue-700 shadow-lg py-2 hover:bg-blue-700 hover:text-white hover:shadow-lg hover:shadow-blue-200 shadow-blue-300 duration-300 focus:bg-blue-700";
+    const inactiveClass = "py-2 hover:bg-blue-700 hover:text-white hover:shadow-lg hover:shadow-blue-200 shadow-blue-300 duration-300 focus:bg-blue-700";
     return (
         <>
          <Helmet>
@@ -32,13 +33,20 @@ const DashboardLayout = () => {
   </div> 
   <div className="drawer-side">
     <label htmlFor="my-drawer-2" className="drawer-overlay"></label> 
-    <ul className="menu p-4 w-80 h-full text-xl bg-[#AC9C63] text-white">
+    <ul className="menu p-4 w-80 h-full text-xl bg-[#AC9C63] text-white bg-gradient-to-bl from-blue-500 to-purple-600">
       {/* Sidebar content here */}
 
-      {/* instructor  */}
+      
 
-       <li><Link to='/dashboard/home' > <SiGoogleclassroom></SiGoogleclassroom>   Add A Class</Link></li>
-       <li><Link to='/dashboard/addclass' > <SiGoogleclassroom></SiGoogleclassroom>   Add A Class</Link></li>
+      
+       <li>
+                            <NavLink
+                                to='/dashboard/home'
+                                className={({ isActive }) => isActive ? activeClass : inactiveClass}>
+                                <AiOutlineHome />
+                                Dashboard
+                            </NavLink>
+                        </li>
       <li><Link to='/dashboard/myclasses' > <SiGooglemeet></SiGooglemeet>  My classes</Link></li>
 
      
