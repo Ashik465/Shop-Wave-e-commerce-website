@@ -1,6 +1,6 @@
 
 import { Link, NavLink, Outlet } from "react-router-dom";
-import { SiGooglemeet } from "react-icons/si";
+import { VscAccount } from "react-icons/vsc";
 // import { MdManageAccounts, MdPayment, MdSportsScore } from "react-icons/md";
 import { AiOutlineHome } from "react-icons/ai";
 import { Helmet } from "react-helmet-async";
@@ -47,7 +47,7 @@ const DashboardLayout = () => {
                                 Dashboard
                             </NavLink>
                         </li>
-      <li><Link to='/dashboard/myclasses' > <SiGooglemeet></SiGooglemeet>  My classes</Link></li>
+      <li><Link to='/dashboard/customers'className={({ isActive }) => isActive ? activeClass : inactiveClass} >  <VscAccount />  customer</Link></li>
 
      
       

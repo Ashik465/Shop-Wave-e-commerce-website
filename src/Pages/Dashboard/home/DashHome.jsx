@@ -39,7 +39,7 @@ const DashHome = () => {
     </div>
     {/* customer */}
     <div>
-        <h1 className="text-3xl font-bold my-5">Customer</h1>
+        <h1 className="text-3xl font-bold my-5 text-purple-400">Customer</h1>
     </div>
     <div className="overflow-x-auto">
               <table className="table">

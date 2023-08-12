@@ -10,6 +10,7 @@ import SingleProduct from "../Pages/Home/products/SingleProduct";
 import Cart from "../Pages/Cart/Cart";
 import DashboardLayout from "../layout/DashboardLayout";
 import DashHome from "../Pages/Dashboard/home/DashHome";
+import Customers from "../Pages/Dashboard/Customers/Customers";
 
 
  export const router = createBrowserRouter([
@@ -54,8 +55,8 @@ import DashHome from "../Pages/Dashboard/home/DashHome";
             element: <DashHome></DashHome>,
           },
           {
-            path: "myclasses",
-            // element: <InstructorRoute><MyClasses></MyClasses></InstructorRoute>
+            path: "customers",
+            element: <Customers />,
           },
           {
             path: "updateclass/:id",
