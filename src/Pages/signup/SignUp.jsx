@@ -47,7 +47,7 @@ if(data.password !== data.confirmPassword){
 
       //axios post request to add user to database
       
-      axios.post('http://localhost:5000/adduser', {
+      axios.post('https://shop-wave-server.vercel.app/adduser', {
         name: data.name, email: data.email,role:'customer',image:data.photoURL
       })
       .then((data)=>{

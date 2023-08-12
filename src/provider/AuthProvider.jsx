@@ -52,7 +52,7 @@ const googleLogIn = () => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       
       if(currentUser) {
-        axios.post('http://localhost:5000/jwt', {
+        axios.post('https://shop-wave-server.vercel.app/jwt', {
           email: currentUser.email,
           
         })

@@ -38,7 +38,7 @@ import Orderlist from "../Pages/Dashboard/Orderlist/Orderlist";
             path: "/product/:id",
             element: <SingleProduct />,
             loader: ({ params }) =>
-              fetch(`http://localhost:5000/product/${params.id}`),
+              fetch(`https://shop-wave-server.vercel.app/product/${params.id}`),
           },
           {
             path: "/cart",

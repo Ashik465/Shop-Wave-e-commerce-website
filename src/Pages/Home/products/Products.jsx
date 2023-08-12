@@ -9,7 +9,7 @@ const Products = () => {
     async function fetchData() {
       try {
         const response = await fetch(
-          "http://localhost:5000/products"
+          "https://shop-wave-server.vercel.app/products"
         );
         const data = await response.json();
         setData(data);

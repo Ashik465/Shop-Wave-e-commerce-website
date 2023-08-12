@@ -104,7 +104,7 @@ const Navbar = () => {
                 Cart
               </NavLink>
             </li>
-            <li>
+            {user &&    <li>
               <NavLink
                className={({ isActive }) =>
                isActive
@@ -115,7 +115,7 @@ const Navbar = () => {
               >
                 Dashboard
               </NavLink>
-            </li>
+            </li> }
             </ul>
           </div>
           <Link to="/">
@@ -163,7 +163,7 @@ const Navbar = () => {
                 Cart
               </NavLink>
             </li>
-            <li>
+            {/* <li>
               <NavLink
                className={({ isActive }) =>
                isActive
@@ -174,8 +174,19 @@ const Navbar = () => {
               >
                 Dashboard
               </NavLink>
-            </li>
-            {/* {user &&   <li><NavLink className= 'focus:bg-transparent hover:bg-transparent hover:text-blue-400' to = '/dashboard'>Dashboard</NavLink></li>} */}
+            </li> */}
+            {user &&    <li>
+              <NavLink
+               className={({ isActive }) =>
+               isActive
+                 ? "active-link"
+                 : "focus:bg-transparent hover:bg-transparent hover:text-blue-400"
+             }
+                to="/dashboard/home"
+              >
+                Dashboard
+              </NavLink>
+            </li> }
           </ul>
         </div>
         <div className="navbar-end">

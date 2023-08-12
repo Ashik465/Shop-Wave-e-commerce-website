@@ -6,7 +6,7 @@ const DashHome = () => {
     const { data: users } = useQuery({
         queryKey: ["users"],
         queryFn: () =>
-          fetch("http://localhost:5000/customers").then((res) =>
+          fetch("https://shop-wave-server.vercel.app/customers").then((res) =>
             res.json()
           ),
       });
