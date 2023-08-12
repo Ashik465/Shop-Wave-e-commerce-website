@@ -11,6 +11,7 @@ import Cart from "../Pages/Cart/Cart";
 import DashboardLayout from "../layout/DashboardLayout";
 import DashHome from "../Pages/Dashboard/home/DashHome";
 import Customers from "../Pages/Dashboard/Customers/Customers";
+import Productlist from "../Pages/Dashboard/Productlist/Productlist";
 
 
  export const router = createBrowserRouter([
@@ -59,8 +60,8 @@ import Customers from "../Pages/Dashboard/Customers/Customers";
             element: <Customers />,
           },
           {
-            path: "updateclass/:id",
-            // element: <InstructorRoute><UpdateClass></UpdateClass></InstructorRoute>,
+            path: "productlist",
+            element: <Productlist />,
           },
           {
             path: "manageclasses",

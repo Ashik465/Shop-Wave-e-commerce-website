@@ -1,8 +1,8 @@
 
 import { Link, NavLink, Outlet } from "react-router-dom";
 import { VscAccount } from "react-icons/vsc";
-// import { MdManageAccounts, MdPayment, MdSportsScore } from "react-icons/md";
-import { AiOutlineHome } from "react-icons/ai";
+
+import { AiOutlineHome, AiOutlineUnorderedList } from "react-icons/ai";
 import { Helmet } from "react-helmet-async";
 
 import DashNav from "../Pages/Dashboard/DashNav/DashNav";
@@ -48,22 +48,14 @@ const DashboardLayout = () => {
                             </NavLink>
                         </li>
       <li><Link to='/dashboard/customers'className={({ isActive }) => isActive ? activeClass : inactiveClass} >  <VscAccount />  customer</Link></li>
+      <li><Link to='/dashboard/productlist'className={({ isActive }) => isActive ? activeClass : inactiveClass} >  <AiOutlineUnorderedList />  Product List</Link></li>
 
      
       
-    {/* student  */}
-
-      {/* {isStudent?.student && <> <li><Link to='/dashboard/myselectedclass' > <SiGoogleclassroom></SiGoogleclassroom>  My Selected classes</Link></li>
-      
-      <li><Link to='/dashboard/myenrollclasses' > <MdSportsScore></MdSportsScore>  My Enroll classes</Link></li>
-      <li><Link to='/dashboard/paymenthistory' > <MdPayment></MdPayment> Payment History</Link></li>
-       </>} */}
+   
 
 
-      {/* Admin  */}
-
-      {/* {isAdmin?.admin && <><li><Link to='/dashboard/manageclasses' > <SiGoogleclassroom></SiGoogleclassroom> Manage Classes</Link></li>
-      <li><Link to='/dashboard/manageuser' > <MdManageAccounts></MdManageAccounts> Manage User</Link></li></>} */}
+    
       
 
     </ul>
