@@ -47,8 +47,8 @@ if(data.password !== data.confirmPassword){
 
       //axios post request to add user to database
       
-      axios.post('https://elite-sports-academy-server.vercel.app/users', {
-        name: data.name, email: data.email,role:'student',image:data.photoURL
+      axios.post('http://localhost:5000/adduser', {
+        name: data.name, email: data.email,role:'customer',image:data.photoURL
       })
       .then((data)=>{
 
